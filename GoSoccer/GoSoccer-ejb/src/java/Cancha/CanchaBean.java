@@ -1,21 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Cancha;
 
+import java.io.IOException;
 import javax.ejb.Stateless;
 import javax.ejb.LocalBean;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
-/**
- *
- * @author Marie
- */
 @Stateless
 @LocalBean
-public class CanchaBean {
 
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
+public class CanchaBean {
+    
+    @PersistenceContext
+    EntityManager em;
+    
+     public void guardarCancha(Cancha unaCancha) throws IOException {
+        em.persist(unaCancha);
+    }
 }
+
