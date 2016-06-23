@@ -3,12 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/vgalarza/Documents/NetBeansProjects/GoSoccer/GoSoccer-ejb/src/java/gosoccer/cancha/CanchaBean.java</file>
-            <file>file:/C:/Users/vgalarza/Documents/NetBeansProjects/GoSoccer/GoSoccer-ejb/src/java/gosoccer/usuario/UsuarioBean.java</file>
-            <file>file:/C:/Users/vgalarza/Documents/NetBeansProjects/GoSoccer/GoSoccer-ejb/src/java/gosoccer/usuario/Usuario.java</file>
-            <file>file:/C:/Users/vgalarza/Documents/NetBeansProjects/GoSoccer/GoSoccer-ejb/src/java/gosoccer/reserva/ReservaBean.java</file>
-            <file>file:/C:/Users/vgalarza/Documents/NetBeansProjects/GoSoccer/GoSoccer-ejb/src/java/gosoccer/cancha/Cancha.java</file>
-            <file>file:/C:/Users/vgalarza/Documents/NetBeansProjects/GoSoccer/GoSoccer-ejb/src/java/gosoccer/mail/ReservaMDB.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/reserva/ReservaBeanLocal.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/reserva/CanchaInhabilitadaException.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/cancha/Cancha.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/cancha/CanchaBeanLocal.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/usuario/UsuarioDto.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/usuario/Usuario.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/usuario/UsuarioBean.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/token/TokenBeanLocal.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/token/Token.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/reserva/ReservaMDB.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/excepcion/DatoErroneoException.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/excepcion/EntidadYaExisteException.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/token/TokenBean.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/excepcion/EntidadNoExisteException.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/reserva/Reserva.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/usuario/UsuarioBeanLocal.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/MailBean.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/reserva/ReservaBean.java</file>
+            <file>file:/C:/Users/Marie/Documents/Arq%20de%20Software/GoSoccer/GoSoccer-ejb/src/java/com/gosoccer/cancha/CanchaBean.java</file>
         </group>
     </open-files>
 </project-private>
