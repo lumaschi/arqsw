@@ -1,17 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Cancha;
+package com.gosoccer.cancha;
 
+import com.gosoccer.excepcion.DatoErroneoException;
+import com.gosoccer.excepcion.EntidadNoExisteException;
+import java.util.List;
 import javax.ejb.Local;
 
-/**
- *
- * @author vgalarza
- */
 @Local
 public interface CanchaBeanLocal {
     
+    Cancha obtenerCancha(Long id) throws EntidadNoExisteException;
+    
+    Cancha crearCancha(Cancha unaCancha) throws DatoErroneoException;
+    
+    List<Cancha> obtenerCanchas();
+
 }

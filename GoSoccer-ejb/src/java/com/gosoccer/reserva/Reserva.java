@@ -1,25 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Reserva;
+package com.gosoccer.reserva;
 
-import Cancha.Cancha;
-import Usuario.Usuario;
+import com.gosoccer.cancha.Cancha;
+import com.gosoccer.usuario.Usuario;
 import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
 
-/**
- *
- * @author vgalarza
- */
+
 @Entity
 public class Reserva implements Serializable {
 
@@ -27,21 +20,47 @@ public class Reserva implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    //@Column(name = "cancha")
-   // @ManyToOne
+    @NotNull
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "cancha_id")
     private Cancha cancha;
-   
-    //@Temporal(TemporalType.DATE)
-    //@Column(name = "fecha")
-    private Date fecha;
-    
-    //@Column(name = "hora")
-    private int hora;
-    
-    //@Column(name = "usarioCreador")
-    private Usuario usarioCreador;
-    
-    private List<Usuario> usarios;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "usrCreador_id")
+    private Usuario usrCreador;
+
+    @NotNull
+    private String fecha;
+    @NotNull
+    private String hora;
+
+    public Reserva() {
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
+
+    public Usuario getUsrCreador() {
+        return usrCreador;
+    }
+
+    public void setUsrCreador(Usuario usrCreador) {
+        this.usrCreador = usrCreador;
+    }
     
     public Cancha getCancha() {
         return cancha;
@@ -51,42 +70,10 @@ public class Reserva implements Serializable {
         this.cancha = cancha;
     }
 
-    public Date getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
-
-    public int getHora() {
-        return hora;
-    }
-
-    public void setHora(int hora) {
-        this.hora = hora;
-    }
-
-    public Usuario getUsarioCreador() {
-        return usarioCreador;
-    }
-
-    public void setUsarioCreador(Usuario usarioCreador) {
-        this.usarioCreador = usarioCreador;
-    }
-
-    public List<Usuario> getUsarios() {
-        return usarios;
-    }
-
-    public void setUsarios(List<Usuario> usarios) {
-        this.usarios = usarios;
-    }
-   
     public Long getId() {
         return id;
     }
-    public Reserva() {}
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -100,7 +87,6 @@ public class Reserva implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Reserva)) {
             return false;
         }
@@ -115,5 +101,5 @@ public class Reserva implements Serializable {
     public String toString() {
         return "Reserva.Reserva[ id=" + id + " ]";
     }
-    
+
 }

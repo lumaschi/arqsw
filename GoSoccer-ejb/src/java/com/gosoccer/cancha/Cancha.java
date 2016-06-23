@@ -1,38 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Cancha;
+package com.gosoccer.cancha;
 
 import java.io.Serializable;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author vgalarza
- */
 @Entity
+@XmlRootElement
 public class Cancha implements Serializable {
 
-    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "direccion")
+    @NotNull
     private String direccion;
-    
-    @Column(name = "precio")
+
+    @NotNull
     private String precio;
-    
-    @Column(name = "habilitada")
-    private boolean habilitada;
-    
+
+    public Cancha() {
+    }
+
     public String getDireccion() {
         return direccion;
     }
@@ -49,16 +41,6 @@ public class Cancha implements Serializable {
         this.precio = precio;
     }
 
-    public boolean isHabilitada() {
-        return habilitada;
-    }
-
-    public void setHabilitada(boolean habilitada) {
-        this.habilitada = habilitada;
-    }
-    
-    public Cancha() {}
-    
     public Long getId() {
         return id;
     }
@@ -91,5 +73,5 @@ public class Cancha implements Serializable {
     public String toString() {
         return "Cancha.Cancha[ id=" + id + " ]";
     }
-    
+
 }

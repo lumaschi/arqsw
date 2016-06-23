@@ -1,49 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Usuario;
+package com.gosoccer.usuario;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
-/**
- *
- * @author vgalarza
- */
+
 @Entity
 public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-        
-    //@Column(name = "nombre")
+
+    @NotNull
+    @Column(unique = true)
     private String nombre;
 
-    //@Column(name = "email")
+    @NotNull
     private String email;
-    
-    //@Column(name = "contrasena")
+
+    @NotNull
     private String contrasena;
-    
-   // @Column(name = "estado")
+
     private boolean estado;
-      
-    public Usuario() {}
-    
+
+    public Usuario() {
+    }
+
     public Usuario(String nombre, String email, String contrasena, boolean estado) {
         this.contrasena = contrasena;
         this.estado = estado;
         this.email = email;
         this.contrasena = contrasena;
-        this.id = id;
     }
-    
+
     public String getContrasena() {
         return contrasena;
     }
@@ -59,6 +53,7 @@ public class Usuario implements Serializable {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
+
     public Long getId() {
         return id;
     }
@@ -66,6 +61,7 @@ public class Usuario implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getNombre() {
         return nombre;
     }
@@ -81,7 +77,7 @@ public class Usuario implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -91,7 +87,6 @@ public class Usuario implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Usuario)) {
             return false;
         }
@@ -106,5 +101,5 @@ public class Usuario implements Serializable {
     public String toString() {
         return "entities.Usuario[ id=" + id + " ]";
     }
-    
+
 }
